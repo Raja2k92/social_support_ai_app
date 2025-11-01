@@ -1,5 +1,6 @@
 from typing import Dict
 
+from mock_db.postgres_mock import postgres_mock
 from utils.llm_client import ask_ollama
 
 
@@ -66,5 +67,6 @@ Respond in valid JSON format:
 
         # Call local LLM (Gemma via Ollama)
         decision_response = ask_ollama(prompt)
-
+        # Save DB
+        postgres_mock(decision_response)
         return {"recommendation": decision_response}
