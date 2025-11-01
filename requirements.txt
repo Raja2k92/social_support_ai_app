@@ -1,0 +1,7 @@
+streamlit==1.27.0
+requests==2.31.0
+pypdf==3.15.0
+langgraph==0.1.12
+scikit-learn
+numpy
+joblib
